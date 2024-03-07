@@ -1,12 +1,7 @@
 window.addEventListener("scroll" , e =>{
     document.body.style.cssText = `--scrollTop: ${this.scrollY}px`
 })
-// const texts = document.querySelectorAll('.text-container div');
-//   texts.forEach((text, index) => {
-//     setTimeout(() => {
-//       text.classList.add('show');
-//     }, 1000 * (index + 1));  
-//   });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const leftTitles = document.querySelectorAll('.left .title, .left .subtitle');
@@ -53,6 +48,7 @@ setInterval(() => {
     for (let i = 0; i < starCount; i++) {
       setTimeout(createStar, i * 300);
     }
-}, 8000);
+}, 6000);
 
 createStar()
+
