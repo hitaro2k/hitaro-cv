@@ -1,7 +1,3 @@
-window.addEventListener("scroll" , e =>{
-    document.body.style.cssText = `--scrollTop: ${this.scrollY}px`
-})
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const leftTitles = document.querySelectorAll('.left .title, .left .subtitle');
@@ -19,7 +15,38 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => element.classList.add('show'), index * 500); // Постепенное появление каждого элемента
       });
     }, maxDelay + 1500);
+    
+    
+   
+    const smoothScrollLinks = document.querySelectorAll('.link-swipe');
+
+    smoothScrollLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function zoomImg(){
+      const img = document.querySelectorAll(".img-project")
+      
+      img.forEach(item =>{
+        item.onmouseenter = ()=>{
+      
+          item.style.width = "90" + "%"
+        }
+        item.onmouseleave = ()=>{
+          item.style.width = "50" + "%"
+        }
+      }) 
+    }
+    zoomImg()
 })
+
 function createStar() {
     const star = document.createElement('div');
     star.classList.add('shooting-star');
@@ -41,7 +68,7 @@ function createStar() {
       easing: 'linear',
       fill: 'forwards' // Удерживает состояние анимации на последнем кадре
     }).onfinish = () => star.remove(); // Удаляем звезду после завершения анимации
-  }
+}
   
 setInterval(() => {
     const starCount = 7 + Math.floor(Math.random() * 4);
