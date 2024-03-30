@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
       img.forEach(item =>{
         item.onmouseenter = ()=>{
       
-          item.style.width = "90" + "%"
+          item.style.width = "100" + "%"
         }
         item.onmouseleave = ()=>{
-          item.style.width = "50" + "%"
+          item.style.width = "60" + "%"
         }
       }) 
     }
