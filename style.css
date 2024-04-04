@@ -307,32 +307,43 @@ body{
                             }
                         }
                     }
-                    
-                    .tech{
-                        gap: 0px 20px;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        .subtitle{
+                    .wrap{
+                        .tech{
+                            gap: 0px 20px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            .subtitle{
+                                color: gray;
+                                font-size: 12px;
+                            }
+                            .icon{
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                        
+                        .text{
                             color: gray;
                             font-size: 12px;
                         }
-                        .icon{
-                            width: 20px;
-                            height: 20px;
-                        }
                     }
                     
-                    .text{
-                        color: gray;
-                        font-size: 12px;
-                    }
-                    
+
                     .img{
                         width: 50%;
                         margin-top:15px;
                         transition: 1s;
                     }
+                    .img_wrapper{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        .special_img{
+                            width: 30%;
+                        }
+                    }
+                    
                 }
             }
            

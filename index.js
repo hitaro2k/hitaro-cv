@@ -44,6 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }) 
     }
+    function zoomImg_stack(){
+      const imgList = document.querySelectorAll(".special_img")
+      imgList.forEach(item => {
+        item.onclick = () => {
+            imgList.forEach(img => {
+                img.style.width = "30%";
+                img.classList.remove("active");
+            });
+
+            item.style.width = "90%";
+            item.classList.add("active");
+        };
+    });
+    }
+    zoomImg_stack()
     zoomImg()
 })
 
